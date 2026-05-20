@@ -1,108 +1,118 @@
-# 📚 Library Manager - Gerenciador de Biblioteca
+# Library Manager
 
-Um aplicativo de linha de comando desenvolvido em Node.js para gerenciar sua biblioteca pessoal.
+![Node.js](https://img.shields.io/badge/node-%3E%3D18-green)
+![CLI](https://img.shields.io/badge/type-CLI-blue)
+![JSON](https://img.shields.io/badge/storage-JSON-orange)
+![ESModules](https://img.shields.io/badge/modules-ESM-yellow)
+![License](https://img.shields.io/badge/license-MIT-informational)
 
-## ✨ Funcionalidades
+## Descrição
 
-- ✅ **Adicionar Livros**: Cadastre novos livros com título, autor, categoria e status de leitura
-- ✅ **Listar Livros Cadastrados**: Visualize todos os livros armazenados
-- ✅ **Marcar como Lido/Não Lido**: Acompanhe o progresso de leitura de cada livro
-- ✅ **Remover Livros**: Delete livros da sua biblioteca pessoal
-- ✅ **Menu Interativo**: Interface amigável no terminal com opções claras
-- ✅ **Persistência em JSON**: Todos os dados são salvos em arquivo
+O **Library Manager** é uma aplicação de linha de comando desenvolvida em Node.js para gerenciamento de uma biblioteca pessoal.
 
-## 🛠️ Tecnologias Utilizadas
+O projeto permite cadastrar, listar, atualizar e remover livros diretamente pelo terminal através de um menu interativo, armazenando todas as informações em um arquivo JSON para persistência de dados.
 
-- **Node.js** - Runtime JavaScript
-- **Readline** - Módulo integrado para entrada de dados no terminal
-- **ES Modules** - Importação/exportação de módulos
-- **Arquivo JSON** - Para persitência de dados
+A aplicação foi criada com foco em prática de conceitos fundamentais de JavaScript moderno e Node.js, incluindo manipulação de arquivos, operações CRUD, modularização, recursão e interação via terminal utilizando o módulo `readline`.
 
-## 📋 Conceitos JavaScript Aplicados
+---
 
-Este projeto pratica os seguintes conceitos:
+## Tecnologias utilizadas
 
-- Arrays e métodos (`splice`, `push`, `findIndex`)
-- Objetos e manipulação de propriedades
-- Arrow Functions
-- Higher-Order Functions (HOF) e Callbacks
-- Recursão
-- Tratamento de Erros (Try/Catch)
-- JSON (Parse e Stringify)
-- Módulos (Import/Export)
-- Destructuring
-- Operações CRUD
+| Tecnologia | Versão | Função |
+|---|---|---|
+| [Node.js](https://nodejs.org/) | >= 18 | Ambiente de execução JavaScript |
+| `readline` | Nativo | Entrada e interação via terminal |
+| JSON | Nativo | Persistência de dados |
+| ES Modules | Nativo | Sistema moderno de módulos (`import/export`) |
+| `fs/promises` | Nativo | Manipulação assíncrona de arquivos |
 
-## 🚀 Como Usar
+A aplicação utiliza persistência local através de arquivos JSON e arquitetura modular utilizando ES Modules.
+
+---
+
+## Estrutura do projeto
+
+```bash
+library_manager/
+├── index.js            # Ponto de entrada da aplicação
+├── app.js              # Gerenciamento do menu e fluxo da aplicação
+├── utils.js            # Funções utilitárias e operações CRUD
+├── livros.json         # Persistência dos dados da biblioteca
+└── README.md
+```
+
+---
+
+## Funcionalidades
+
+| Funcionalidade | Descrição |
+|---|---|
+| Adicionar livros | Cadastro de novos livros |
+| Listar livros | Exibição de todos os livros cadastrados |
+| Atualizar status | Marcar livros como lidos ou não lidos |
+| Remover livros | Exclusão de livros da biblioteca |
+| Menu interativo | Navegação amigável via terminal |
+| Persistência local | Armazenamento dos dados em JSON |
+
+---
+
+## Funcionalidades e diferenciais
+
+- **CLI interativa** — Navegação amigável através de menus no terminal.
+- **Persistência em JSON** — Dados armazenados localmente em arquivo JSON.
+- **Operações CRUD completas** — Criação, leitura, atualização e remoção de livros.
+- **Arquitetura modular** — Separação entre fluxo da aplicação e regras utilitárias.
+- **Programação assíncrona** — Manipulação de arquivos utilizando recursos assíncronos.
+- **Tratamento de erros** — Implementação de `try/catch` para maior robustez.
+- **Recursão** — Utilização de funções recursivas para fluxo de entrada de dados.
+- **ES Modules** — Utilização de `import/export` nativamente.
+- **Manipulação de JSON** — Uso de `JSON.parse()` e `JSON.stringify()`.
+- **Aplicação multiplataforma** — Compatível com Windows, Linux e macOS.
+
+---
+
+## Como executar o projeto
 
 ### Pré-requisitos
-- Node.js instalado na sua máquina
 
-### Instalação
+- [Node.js](https://nodejs.org/) v18 ou superior
+
+### Passo a passo
+
+**1. Clone o repositório e acesse a pasta do projeto:**
+
 ```bash
-git clone <seu-repositorio>
+git clone <url-do-repositorio>
 cd library_manager
 ```
 
-### Executar
+---
+
+**2. Execute a aplicação:**
+
 ```bash
 node index.js
 ```
 
-## 📖 Menu de Opções
+Após iniciar a aplicação, o menu interativo será exibido no terminal.
 
-Ao executar o programa, você terá as seguintes opções:
+---
 
-```
-a) Adicionar novo livro
-b) Listar livros
-c) Marcar como lido/não lido
-d) Remover livro
-e) Sair
-```
+## Observações
 
-## 📁 Estrutura do Projeto
+- O projeto foi desenvolvido com foco em prática de JavaScript moderno e Node.js.
+- Os dados da biblioteca são armazenados localmente no arquivo `livros.json`.
+- A aplicação utiliza o módulo nativo `readline` para interação via terminal.
+- O projeto implementa operações CRUD completas para gerenciamento dos livros.
+- O código utiliza modularização com ES Modules e manipulação de arquivos JSON.
+- O menu da aplicação funciona de forma totalmente interativa no terminal.
 
-```
-library_manager/
-├── index.js        # Ponto de entrada da aplicação
-├── app.js          # Gerenciamento da interface e fluxo do menu
-├── utils.js        # Funções utilitárias (operações CRUD)
-├── livros.json     # Arquivo de persistência de dados
-└── README.md       # Este arquivo
-```
+---
 
-## 🔍 Estrutura de um Livro
+## Licença
 
-Cada livro é armazenado como um objeto JSON com as seguintes propriedades:
+Este projeto está sob a licença [MIT](https://opensource.org/licenses/MIT).
 
-```json
-{
-  "titulo": "O Hobbit",
-  "autor": "Tolkien",
-  "categoria": "Aventura",
-  "lido": true
-}
-```
+---
 
-## 📝 Detalhes da Implementação
-
-### index.js
-Arquivo de entrada que inicia a aplicação chamando `mostrarMenu()`.
-
-### app.js
-Gerencia a interface interativa com o usuário:
-- `mostrarMenu()` - Exibe o menu principal
-- `pedirInfosLivro()` - Inicia o fluxo de cadastro
-- `pedirTitulo()`, `pedirAutor()`, `pedirCategoria()`, `pedirStatus()` - Funções recursivas para coleta de dados
-
-### utils.js
-Contém as operações de manipulação de dados:
-- **Create**: `cadastrarLivro()` - Adiciona novo livro
-- **Read**: `listarLivros()` - Carrega todos os livros
-- **Update**: `marcarComoLido()`, `marcarComoNaoLido()`, `atualizarStatusLivro()` - Modifica status
-- **Delete**: `removerLivro()` - Remove livro
-- **Helpers**: `filtrarPosicaoLivro()`, `semResposta()`, `adicionarNoJson()`
-
-### livros.json
-Arquivo JSON que armazena todos os livros da biblioteca.
+*Desenvolvido por **Ygor Santos** — [LinkedIn](https://www.linkedin.com/in/ygor-santos-869152325/) | [GitHub](https://github.com/ygorzz)*
